@@ -4,6 +4,17 @@
   "newProjectRoot": "projects",
   "projects": {
     "angular-online-store": {
+      "i18n": {
+        "sourceLocale":"en-US",
+        "locales": {
+          "en": {  
+            "translation": "src/locale/messages.xlf"  
+          },
+          "ar": {
+            "translation": "src/locale/message.ar.xlf"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,6 +28,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": true,
             "outputPath": "dist/angular-online-store",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -58,6 +70,12 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "en": {  
+              "localize": ["en"]  
+            },  
+            "ar": {  
+              "localize": ["ar"]  
             }
           },
           "defaultConfiguration": "production"
@@ -68,6 +86,12 @@
             "production": {
               "browserTarget": "angular-online-store:build:production"
             },
+            "en": {  
+              "browserTarget": "angular-online-store:build:en"  
+            },  
+            "ar": {  
+              "browserTarget": "angular-online-store:build:ar"  
+            },  
             "development": {
               "browserTarget": "angular-online-store:build:development"
             }
