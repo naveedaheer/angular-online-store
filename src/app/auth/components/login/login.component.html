@@ -1,1 +1,32 @@
-<p>login works!</p>
+<div class="container">
+    <div class="form-container">
+        <div>
+            <h1>Admin Login Form</h1>
+        </div>
+        <form>
+            <div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter your email</mat-label>
+                        <input matInput type="text" placeholder="Enter user name" required>
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput [type]="hidePassword ? 'password' : 'text'">
+                        <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword"
+                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                            <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div>
+                <button mat-raised-button color="primary" type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
