@@ -7,7 +7,6 @@ import { RouterModule } from '@angular/router';
 /**
  * Angular Material Components
  */
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -21,11 +20,12 @@ import { FooterComponent } from './components/footer/footer.component';
     SharedModule,
     CommonModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
     RouterModule,
   ],
   exports: [
-    SharedModule
+    SharedModule,
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class CoreModule {
