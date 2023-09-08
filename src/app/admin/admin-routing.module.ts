@@ -8,7 +8,7 @@ const routes: Routes = [
     component: AdminComponent,
     children: [
       {
-        path: 'product-catalog',
+        path: 'products',
         loadChildren: () =>
           import('./product/product.module').then(
             (m) => m.ProductModule
