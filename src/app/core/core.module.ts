@@ -8,10 +8,13 @@ import { RouterModule } from '@angular/router';
  * Angular Material Components
  */
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HeaderComponent
+  ],
   imports: [
     SharedModule,
     CommonModule,
