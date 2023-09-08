@@ -1,11 +1,10 @@
-    // product-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductCatalogComponent } from './components/product-catalog/product-catalog.component';
 
 const routes: Routes = [
   {
-    path: 'products',
+    path: '',
     component: ProductCatalogComponent,
   }
 ];
