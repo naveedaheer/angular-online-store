@@ -7,7 +7,7 @@ import { loginStart } from '../../state/auth.actions';
 import { MatFormFieldModule } from '@angular/material/form-field'; // Import the MatFormFieldModule
 import { MatIconModule } from '@angular/material/icon';
 
-fdescribe('LoginComponent', () => {
+describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
   let store: Store<AppState>;
