@@ -4,10 +4,14 @@ export interface ProductState {
   productDetail: ProductResponseData | null;
   loading: boolean;
   error: string | null;
+  adding: boolean;
+  deleting: boolean
 }
 export const initialState: ProductState = {
   products: [],
   productDetail: null,
   loading: false,
   error: null,
+  adding: false,
+  deleting: false
 };

@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { ProductResponseData } from 'src/app/models/product.model';
+import { AddProduct, ProductResponseData } from 'src/app/models/product.model';
 
 // Product List
 export const loadProducts = createAction('[Products] Load Products');
@@ -15,3 +15,8 @@ export const loadProductDetailFailure = createAction('[Products] Load Product De
 export const deleteProduct = createAction('[Products] Delete Product', props<{ productId: number }>());
 export const deleteProductSuccess = createAction('[Products] Delete Product Success', props<{ productId: number }>());
 export const deleteProductFailure = createAction('[Products] Delete Product Failure', props<{ error: any }>());
+
+// product Add
+export const addProduct = createAction('[Products] Add Product', props<{ product: AddProduct }>());
+export const addProductSuccess = createAction('[Products] Add Product Success', props<{ product: AddProduct }>());
+export const addProductFailure = createAction('[Products] Add Product Failure', props<{ error: any }>());

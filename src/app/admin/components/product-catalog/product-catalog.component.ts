@@ -7,6 +7,7 @@ import { ProductResponseData } from 'src/app/models/product.model';
 import { AppState } from 'src/app/store/app.state';
 import { deleteProduct, loadProducts } from '../../state/products.actions';
 import { selectProducts } from '../../state/products.selector';
+import { AddProductComponent } from '../add-product/add-product.component';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 
 @Component({
@@ -49,5 +50,14 @@ export class ProductCatalogComponent {
   }
   deleteProduct(productId: number) {
     this.store.dispatch(deleteProduct({ productId }));
+  }
+  openAddProductDialog() {
+    const dialogRef = this.dialog.open(AddProductComponent, {
+      width: '400px',
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
+      // You can perform actions after the modal is closed, e.g., refresh product list
+    });
   }
 }

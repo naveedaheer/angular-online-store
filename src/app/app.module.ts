@@ -14,10 +14,14 @@ import { appReducer } from './store/app.state';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ProductEffects } from './admin/state/products.effects';
 import { environment } from 'src/environments/environment';
-
+import { AddProductComponent } from './admin/components/add-product/add-product.component';
+import { MaterialModule } from './shared/material.module';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +40,9 @@ import { environment } from 'src/environments/environment';
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Number of actions to retain in the history
     }),
+    MaterialModule,
+    MatSelectModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

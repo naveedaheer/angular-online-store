@@ -8,6 +8,12 @@ export interface ProductResponseData {
     title: string,
 }
 
+export interface AddProduct {
+    title: string,
+    description: string,
+    price: number,
+    category: string,
+}
 export class Product {
     constructor(
         public productName: string,

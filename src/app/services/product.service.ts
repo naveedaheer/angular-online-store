@@ -31,4 +31,12 @@ export class ProductService {
     const url = `${this.apiUrl}/products/${productId}`;
     return this.http.delete<void>(url);
   }
+  addProduct(productData: any): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/products`, productData);
+  }
+
+  getCategories(): Observable<string[]> {
+    const url = `${this.apiUrl}/products/categories`;
+    return this.http.get<string[]>(url);
+  }
 }
