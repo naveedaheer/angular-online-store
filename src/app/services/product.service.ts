@@ -12,12 +12,16 @@ import { ProductResponseData } from '../models/product.model';
   providedIn: 'root',
 })
 export class ProductService {
-  private apiUrl = 'https://fakestoreapi.com/products';
+  private apiUrl = 'https://fakestoreapi.com';
 
-  constructor(private http: HttpClient, private store: Store<{ products: ProductState }>) {}
+  constructor(private http: HttpClient, private store: Store<{ products: ProductState }>) { }
 
   getProducts(): Observable<ProductResponseData[]> {
-    return this.http.get<ProductResponseData[]>(this.apiUrl);
+    return this.http.get<ProductResponseData[]>(`${this.apiUrl}/products`);
+  }
+
+  getProductDetail(id: number): Observable<ProductResponseData> {
+    return this.http.get<ProductResponseData>(`${this.apiUrl}/products/${id}`);
   }
 
   loadProducts() {

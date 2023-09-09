@@ -10,3 +10,8 @@ export const selectProducts = createSelector(
   selectProductState,
   (state: ProductState) => state.products
 );
+
+export const selectProductDetail = createSelector(
+  selectProductState,
+  (state: ProductState) => state.productDetail
+);
