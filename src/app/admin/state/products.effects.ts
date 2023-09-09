@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators';
-import { loadProductDetail, loadProductDetailFailure, loadProductDetailSuccess, loadProducts, loadProductsFailure, loadProductsSuccess } from './products.actions';
+import { deleteProduct, deleteProductFailure, deleteProductSuccess, loadProductDetail, loadProductDetailFailure, loadProductDetailSuccess, loadProducts, loadProductsFailure, loadProductsSuccess } from './products.actions';
 import { ProductService } from '../../services/product.service'; // Your product service to fetch data
 
 @Injectable()
@@ -35,4 +35,16 @@ export class ProductEffects {
       )
     )
   );
+  
+  deleteProduct$ = createEffect(() =>
+  this.actions$.pipe(
+    ofType(deleteProduct),
+    switchMap((action) =>
+      this.productService.deleteProduct(action.productId).pipe(
+        map(() => deleteProductSuccess({ productId: action.productId })),
+        catchError((error) => of(deleteProductFailure({ error })))
+      )
+    )
+  )
+);
 }

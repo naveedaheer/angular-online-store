@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { loadProductDetail, loadProductDetailSuccess, loadProducts, loadProductsSuccess } from './products.actions';
+import { deleteProduct, deleteProductFailure, deleteProductSuccess, loadProductDetail, loadProductDetailSuccess, loadProducts, loadProductsSuccess } from './products.actions';
 import { initialState } from './products.state';
 
 export const productReducer = createReducer(
@@ -22,4 +22,12 @@ export const productReducer = createReducer(
       loading: false
     };
   }),
+
+  on(deleteProduct, (state) => ({ ...state, deleting: true })),
+  on(deleteProductSuccess, (state, { productId }) => ({
+    ...state,
+    products: state.products.filter((product) => product.id !== productId),
+    deleting: false,
+  })),
+  on(deleteProductFailure, (state, { error }) => ({ ...state, error, deleting: false }))
 );

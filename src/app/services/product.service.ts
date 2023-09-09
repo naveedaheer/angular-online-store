@@ -27,4 +27,8 @@ export class ProductService {
   loadProducts() {
     this.store.dispatch(ProductActions.loadProducts());
   }
+  deleteProduct(productId: number): Observable<void> {
+    const url = `${this.apiUrl}/products/${productId}`;
+    return this.http.delete<void>(url);
+  }
 }

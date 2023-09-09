@@ -10,3 +10,8 @@ export const loadProductsFailure = createAction('[Products] Load Products Failur
 export const loadProductDetail = createAction('[Products] Load Product Detail', props<{ productId: number }>());
 export const loadProductDetailSuccess = createAction('[Products] Load Product Detail Success', props<{ product: ProductResponseData }>());
 export const loadProductDetailFailure = createAction('[Products] Load Product Detail Failure', props<{ error: string }>());
+
+// Product Delete
+export const deleteProduct = createAction('[Products] Delete Product', props<{ productId: number }>());
+export const deleteProductSuccess = createAction('[Products] Delete Product Success', props<{ productId: number }>());
+export const deleteProductFailure = createAction('[Products] Delete Product Failure', props<{ error: any }>());

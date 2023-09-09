@@ -5,14 +5,17 @@ import { ProductCatalogComponent } from './components/product-catalog/product-ca
 import { AdminComponent } from './admin.component';
 import { MaterialModule } from '../shared/material.module';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component'
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
-  declarations: [ProductCatalogComponent, AdminComponent, ProductDetailComponent],
+  declarations: [ProductCatalogComponent, AdminComponent, ProductDetailComponent, ConfirmationDialogComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    MaterialModule
-  ]
+    MaterialModule,
+    MatDialogModule
+  ],
 })
 export class AdminModule { }
