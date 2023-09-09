@@ -11,7 +11,7 @@
             "translation": "src/locale/messages.xlf"  
           },
           "ar": {
-            "translation": "src/locale/message.ar.xlf"
+            "translation": "src/locale/messages.ar.xlf"
           }
         }
       },
@@ -29,6 +29,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "localize": true,
+            "i18nMissingTranslation": "warning",
             "outputPath": "dist/angular-online-store",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -104,7 +105,9 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-online-store:build"
+            "browserTarget": "angular-online-store:build",
+            "format": "xlf",
+            "outputPath": "src/locale"
           }
         },
         "test": {

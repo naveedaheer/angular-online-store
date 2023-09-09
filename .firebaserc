@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "aheer-online-store": {
+      "hosting": {
+        "angular-online-store": [
+          "aheer-online-store"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "aheer-online-store"
+  }
+}
