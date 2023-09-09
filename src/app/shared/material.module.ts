@@ -9,6 +9,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatTableModule } from '@angular/material/table';
+
 
 /**
  * NgModule that includes all Material modules that are required to serve the app.
@@ -22,7 +24,8 @@ import { MatChipsModule } from '@angular/material/chips';
         MatFormFieldModule, 
         ReactiveFormsModule,
         MatCardModule,
-        MatChipsModule
+        MatChipsModule,
+        MatTableModule
     ]
 })
 export class MaterialModule { }

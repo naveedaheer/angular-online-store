@@ -14,15 +14,15 @@ import { selectProducts } from '../../state/products.selector';
 })
 export class ProductCatalogComponent {
   products$: Observable<ProductResponseData[]>; // Observable to hold the selected products
+  displayedColumns: string[] = ['id', 'image', 'title', 'price', 'category',  'description','actions'];
 
   constructor(
     private store: Store<AppState>,
     private router: Router
-
   ) {
     this.products$ = this.store.pipe(select(selectProducts));
-
   }
+
   ngOnInit() {
     this.store.dispatch(loadProducts())
   }
