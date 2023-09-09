@@ -5,7 +5,7 @@
         </div>
         <div class="card">
             <div *ngFor="let product of products$ | async">
-                <mat-card class="example-card">
+                <mat-card class="example-card" (click)="goToProductDetail(product.id)">
                     <mat-card-header>
                         <mat-card-title class="mat-card-title">{{product.title}}</mat-card-title>
                     </mat-card-header>

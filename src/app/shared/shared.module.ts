@@ -2,9 +2,6 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {  HttpClientModule } from '@angular/common/http';
 
-/**
- * UI component modules
- */
 import { MaterialModule } from './material.module';
 
 @NgModule({
