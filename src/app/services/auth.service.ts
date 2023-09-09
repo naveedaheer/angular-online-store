@@ -1,5 +1,5 @@
 import { User } from './../models/user.model';
-import { Observable, of } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 import { AuthResponseData } from '../models/authResponseData.model';
 import { Injectable } from '@angular/core';
 import { AppState } from '../store/app.state';
@@ -10,20 +10,35 @@ import { autoLogout } from '../auth/state/auth.actions';
   providedIn: 'root',
 })
 export class AuthService {
+  private userCredential = {
+    username: 'user',
+    password: 'user'
+  }
+  private adminCredential = {
+    username: 'admin',
+    password: 'admin'
+  }
   timeoutInterval: any;
-  constructor(private store: Store<AppState>) {}
-
-login(username: string, password: string): Observable<AuthResponseData> {
+  constructor(private store: Store<AppState>) { }
+  login(username: string, password: string): Observable<AuthResponseData> {
     // Simulate a successful login response
-    const staticResponse: AuthResponseData = {
-      displayName: 'User Naveed',
-      idToken: 'your-id-token',
-      expiresIn: '3600',
-      username,
-    };
+    if (
+      (username === this.userCredential.username && password === this.userCredential.password) ||
+      (username === this.adminCredential.username && password === this.adminCredential.password)
+    ) {
+      // If they match, simulate a successful login response
+      const staticResponse: AuthResponseData = {
+        displayName: `${username} Naveed`,
+        idToken: 'your-id-token',
+        expiresIn: '3600',
+        username,
+      };
 
-    // Return the static response as an Observable
-    return of(staticResponse);
+      // Return the static response as an Observable
+      return of(staticResponse);
+    } else {
+      return throwError(() => new Error('Invalid username or password'));
+    }
   }
 
   formatUser(data: AuthResponseData) {

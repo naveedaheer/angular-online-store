@@ -57,7 +57,12 @@ export class AuthEffects {
         tap((action) => {
           this.store.dispatch(setErrorMessage({ message: '' }));
           if (action.redirect) {
-            this.router.navigate(['/']);
+            if (action?.user?.username.toLowerCase() === "user") {
+              this.router.navigate(['/']);
+            }
+            if (action?.user?.username.toLowerCase() === "admin") {
+              this.router.navigate(['/admin/products ']);
+            }
           }
         })
       );
