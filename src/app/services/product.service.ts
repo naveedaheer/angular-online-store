@@ -4,9 +4,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import * as ProductActions from './../admin/components/product-catalog/state/products.actions';
-import { ProductState } from './../admin/components/product-catalog/state/products.state';
-import { ProductResponseData } from '../models/product.modal';
+import * as ProductActions from '../admin/state/products.actions';
+import { ProductState } from '../admin/state/products.state';
+import { ProductResponseData } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root',

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { ProductResponseData } from 'src/app/models/product.modal';
+import { ProductResponseData } from 'src/app/models/product.model';
 import { AppState } from 'src/app/store/app.state';
-import { loadProducts } from './state/products.actions';
-import { selectProducts } from './state/products.selector';
+import { loadProducts } from '../../state/products.actions';
+import { selectProducts } from '../../state/products.selector';
 
 @Component({
   selector: 'app-product-catalog',

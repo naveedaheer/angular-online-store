@@ -12,7 +12,7 @@ import { StoreModule } from '@ngrx/store';
 import { AuthEffects } from './auth/state/auth.effects';
 import { appReducer } from './store/app.state';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { ProductEffects } from './admin/components/product-catalog/state/products.effects';
+import { ProductEffects } from './admin/state/products.effects';
 
 @NgModule({
   declarations: [
