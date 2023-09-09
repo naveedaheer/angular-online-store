@@ -8,6 +8,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 
+import { NgxStarsModule } from 'ngx-stars';
 
 @NgModule({
   declarations: [ProductCatalogComponent, AdminComponent, ProductDetailComponent, ConfirmationDialogComponent],
@@ -15,7 +16,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     CommonModule,
     AdminRoutingModule,
     MaterialModule,
-    MatDialogModule
+    MatDialogModule,
+    NgxStarsModule
   ],
 })
 export class AdminModule { }

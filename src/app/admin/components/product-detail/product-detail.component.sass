@@ -1,0 +1,91 @@
+.container
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+
+    .detail-view
+        width: 80%
+        margin: 2rem 0
+
+        h1
+            font-size: 1.75rem
+            font-weight: 600
+            margin: 1rem 0
+
+        .rating
+            display: flex
+            align-items: center
+            margin: 1rem 0
+            padding-bottom: 1rem
+            border-bottom: 1px solid #ddd
+
+            span
+                margin-bottom: .3rem
+
+        .product-detail
+            display: flex
+            margin: 3rem 0
+
+            .image-section
+                display: flex
+                justify-content: center
+                align-items: center
+                background: white
+                min-height: 500px
+                height: auto
+                min-width: 450px
+                max-width: 100%
+                overflow: hidden
+                padding: 1rem 0
+
+                img
+                    max-width: 100%
+                    height: auto
+                    object-fit: contain
+                    max-height: 500px
+
+            .content-section
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                margin-left: 3rem
+                min-width: 350px
+                width: 100%
+                max-width: 600px
+
+                h2
+                    font-size: 2rem
+                    line-height: 2.5rem
+                    font-weight: 500
+                    border-bottom: 1px solid #ddd
+                    padding-bottom: 1rem
+
+                .price-tag
+                    font-size: 2rem
+                    line-height: 2rem
+                    color: #1E90FF
+                    margin: 1rem 0
+                    padding-bottom: 1rem
+                    border-bottom: 1px solid #ddd
+
+@media (max-width: 992px)
+    .detail-view
+    .product-detail
+        flex-direction: column
+
+@media (max-width: 992px)
+    .container .detail-view .product-detail .content-section
+        margin-left: 0
+        max-width: 100%
+        margin: 2rem 0
+        .category
+            margin: 1rem 0
+
+    .container .detail-view .product-detail .content-section .image-section
+        min-height: 400px
+        min-width: 370px
+        padding: 1rem
+
+        img
+            max-width: 80%

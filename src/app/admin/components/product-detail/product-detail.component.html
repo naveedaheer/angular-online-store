@@ -1,6 +1,35 @@
-<div *ngIf="productDetail$ | async as productDetail">
-    <h2>{{ productDetail.title }}</h2>
-    <p>{{ productDetail.description }}</p>
-    <p>Price: ${{ productDetail.price }}</p>
-    <!-- Add more details as needed -->
+<div class="container">
+
+  <div class="detail-view">
+    <h1>Detail View</h1>
+
+    <div class="product-detail" *ngIf="productDetail$ | async as productDetail">
+      <div class="image-section">
+        <img mat-card-image [src]="productDetail.image" width="400" alt="Photo of a product">
+      </div>
+
+      <div class="content-section">
+        <div>
+          <h2>{{ productDetail.title }}</h2>
+
+          <div class="rating">
+            <ngx-stars [readonly]="true" [maxStars]="5" [animation]="productDetail.rating.rate ? false : true"
+              [color]="'dodgerblue'" [size]="1" [customPadding]="'.3rem'"
+              [initialStars]="productDetail.rating.rate"></ngx-stars>
+            <span>({{productDetail.rating.count}})</span>
+          </div>
+
+          <div class="price-tag">{{ productDetail.price | currency }}</div>
+
+          <div class="category">
+            <span><b>Category: </b> {{ productDetail.category }}</span>
+          </div>
+        </div>
+
+        <div>
+          <p><b>Description:</b> {{ productDetail.description }}</p>
+        </div>
+      </div>
+    </div>
   </div>
+</div>

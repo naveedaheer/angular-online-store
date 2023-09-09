@@ -20,8 +20,8 @@ export class ProductDetailComponent {
     private route: ActivatedRoute
   ) {
     this.productDetail$ = this.store.pipe(select(selectProductDetail));
-
   }
+  
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.store.dispatch(loadProductDetail({ productId: params['id'] }))
