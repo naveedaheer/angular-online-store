@@ -4,7 +4,7 @@
             <h1>Products</h1>
         </div>
         <div class="card">
-            <div *ngFor="let product of products">
+            <div *ngFor="let product of products$ | async">
                 <mat-card class="example-card">
                     <mat-card-header>
                         <mat-card-title class="mat-card-title">{{product.title}}</mat-card-title>

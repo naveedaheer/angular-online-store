@@ -1,5 +1,7 @@
+import { ProductResponseData } from "src/app/models/product.modal";
+
 export interface ProductState {
-  products: any[];
+  products: ProductResponseData[];
   loading: boolean;
   error: string | null;
 }
