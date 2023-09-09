@@ -61,7 +61,7 @@ export class AuthEffects {
               this.router.navigate(['/']);
             }
             if (action?.user?.username.toLowerCase() === "admin") {
-              this.router.navigate(['/admin/products ']);
+              this.router.navigate(['/admin/products']);
             }
           }
         })

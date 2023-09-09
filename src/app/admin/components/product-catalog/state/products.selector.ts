@@ -1,0 +1,1 @@
+export const PRODUCT_STATE_NAME = 'product';

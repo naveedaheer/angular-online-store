@@ -11,6 +11,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { AuthEffects } from './auth/state/auth.effects';
 import { appReducer } from './store/app.state';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { ProductEffects } from './admin/components/product-catalog/state/products.effects';
 
 @NgModule({
   declarations: [
@@ -28,8 +30,11 @@ import { appReducer } from './store/app.state';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    EffectsModule.forRoot([AuthEffects]),
+    EffectsModule.forRoot([AuthEffects, ProductEffects]),
     StoreModule.forRoot(appReducer),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Number of actions to retain in the history
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
