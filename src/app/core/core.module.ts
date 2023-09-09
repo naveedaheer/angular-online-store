@@ -7,14 +7,12 @@ import { RouterModule } from '@angular/router';
  * Angular Material Components
  */
 import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { MaterialModule } from '../shared/material.module';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +22,6 @@ import { MaterialModule } from '../shared/material.module';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
   ]
 })
 export class CoreModule {
