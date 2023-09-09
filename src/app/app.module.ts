@@ -13,6 +13,7 @@ import { AuthEffects } from './auth/state/auth.effects';
 import { appReducer } from './store/app.state';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ProductEffects } from './admin/state/products.effects';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { ProductEffects } from './admin/state/products.effects';
     HttpClientModule,
     CoreModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: false,
+      enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'

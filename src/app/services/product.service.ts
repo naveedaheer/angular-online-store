@@ -7,12 +7,12 @@ import { Store } from '@ngrx/store';
 import * as ProductActions from '../admin/state/products.actions';
 import { ProductState } from '../admin/state/products.state';
 import { ProductResponseData } from '../models/product.model';
-
+import { environment } from '../../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
 export class ProductService {
-  private apiUrl = 'https://fakestoreapi.com';
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient, private store: Store<{ products: ProductState }>) { }
 
