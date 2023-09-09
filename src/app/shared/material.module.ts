@@ -7,6 +7,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
+
 /**
  * NgModule that includes all Material modules that are required to serve the app.
  */
@@ -17,7 +20,9 @@ import { ReactiveFormsModule } from '@angular/forms';
         MatButtonModule, 
         MatInputModule, 
         MatFormFieldModule, 
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatCardModule,
+        MatChipsModule
     ]
 })
 export class MaterialModule { }
