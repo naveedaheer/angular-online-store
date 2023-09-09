@@ -76,7 +76,7 @@
                 <th mat-header-cell *matHeaderCellDef aria-label="row actions">&nbsp;</th>
                 <td mat-cell *matCellDef="let element">
                     <div class="action-buttons">
-                        <button mat-icon-button color="primary">
+                        <button mat-icon-button color="primary" (click)="openEditProductDialog(element)">
                             <mat-icon>edit</mat-icon>
                         </button>
 

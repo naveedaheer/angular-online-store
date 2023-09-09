@@ -20,3 +20,8 @@ export const deleteProductFailure = createAction('[Products] Delete Product Fail
 export const addProduct = createAction('[Products] Add Product', props<{ product: AddProduct }>());
 export const addProductSuccess = createAction('[Products] Add Product Success', props<{ product: AddProduct }>());
 export const addProductFailure = createAction('[Products] Add Product Failure', props<{ error: any }>());
+
+// product Edit
+export const editProduct = createAction('[Products] Edit Product', props<{ productId: number, product: AddProduct }>());
+export const editProductSuccess = createAction('[Products] Edit Product Success', props<{ product: AddProduct }>());
+export const editProductFailure = createAction('[Products] Edit Product Failure', props<{ error: any }>());

@@ -60,4 +60,17 @@ export class ProductCatalogComponent {
       // You can perform actions after the modal is closed, e.g., refresh product list
     });
   }
+
+  openEditProductDialog(product: any) {
+    console.log(product, 'product')
+    // Open the Add Product dialog and provide productToEdit for editing
+    const dialogRef = this.dialog.open(AddProductComponent, {
+      width: '400px',
+      data: product, // Pass the product data for editing
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
+      // You can perform actions after the modal is closed, e.g., refresh product list
+    });
+  }
 }

@@ -39,4 +39,9 @@ export class ProductService {
     const url = `${this.apiUrl}/products/categories`;
     return this.http.get<string[]>(url);
   }
+
+  editProduct(productId: number, productData: any): Observable<any> {
+    const url = `${this.apiUrl}/products/${productId}`;
+    return this.http.put<any>(url, productData);
+  }
 }
