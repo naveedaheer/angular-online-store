@@ -1,8 +1,8 @@
-<h1 mat-dialog-title>Confirmation</h1>
-<div mat-dialog-content>
+<h1 mat-dialog-title i18n="@@confirmation">Confirmation</h1>
+<div mat-dialog-content i18n="@@text_areYouSure">
   Are you sure you want to perform this action?
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">Cancel</button>
-  <button mat-button (click)="onYesClick()">Yes</button>
+  <button mat-button (click)="onNoClick()" i18n="@@cancel">Cancel</button>
+  <button mat-button (click)="onYesClick()" i18n="@@yes">Yes</button>
 </div>

@@ -1,20 +1,20 @@
 <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="mat-dialog-container">
     <mat-form-field>
-      <input matInput formControlName="title" placeholder="Product Title" required>
+      <input matInput formControlName="title" placeholder="Product Title" required i18n-placeholder>
     </mat-form-field>
     <mat-form-field>
-      <input matInput formControlName="description" placeholder="Product Description" required>
+      <input matInput formControlName="description" placeholder="Product Description" required i18n-placeholder>
     </mat-form-field>
     <mat-form-field>
-      <input matInput formControlName="price" placeholder="Product Price" required>
+      <input matInput formControlName="price" placeholder="Product Price" required i18n-placeholder>
     </mat-form-field>
     <mat-form-field>
-      <mat-label>Category</mat-label>
+      <mat-label i18n="@@category">Category</mat-label>
       <mat-select formControlName="category" required>
         <mat-option *ngFor="let category of categories" [value]="category">{{ category }}</mat-option>
       </mat-select>
     </mat-form-field>
-    <button *ngIf="!productToEdit" mat-raised-button type="submit">Add Product</button>
-    <button *ngIf="productToEdit" mat-raised-button type="submit">Edit Product</button>
+    <button *ngIf="!productToEdit" mat-raised-button type="submit" i18n="@@addProduct">Add Product</button>
+    <button *ngIf="productToEdit" mat-raised-button type="submit" i18n="@@editProduct">Edit Product</button>
   </form>
   

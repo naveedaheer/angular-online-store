@@ -1,15 +1,15 @@
 <div class="container">
     <div class="form-container">
-        <h3>Login Form</h3>
+        <h3 i18n="loginForm">Login Form</h3>
         <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
             <mat-form-field appearance="outline">
-                <mat-label>Enter your email</mat-label>
-                <input formControlName="username" matInput type="text" placeholder="Enter user name" required>
+                <mat-label i18n="@@enterUsername">Enter your username</mat-label>
+                <input formControlName="username" matInput type="text" placeholder="Enter user name" required i18n-placeholder="enterUsername">
             </mat-form-field>
 
             <mat-form-field appearance="outline">
-                <mat-label>Enter your password</mat-label>
-                <input formControlName="password" matInput [type]="hidePassword ? 'password' : 'text'">
+                <mat-label i18n="enterPassword">Enter your password</mat-label>
+                <input formControlName="password" matInput [type]="hidePassword ? 'password' : 'text'" i18n-placeholder="enterPassword">
                 <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword"
                     [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
                     <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -17,7 +17,7 @@
             </mat-form-field>
 
             <div>
-                <button mat-raised-button color="primary" type="submit">Login</button>
+                <button mat-raised-button color="primary" type="submit" i18n="@@login">Login</button>
             </div>
         </form>
     </div>
