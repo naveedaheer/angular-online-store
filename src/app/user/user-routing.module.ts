@@ -9,8 +9,13 @@ const routes: Routes = [
     component: UserComponent,
     children: [
       {
+        path: '',
+        redirectTo: 'products',
+        pathMatch: 'full',
+      },
+      {
         path: 'products',
-        component: ProductsComponent
+        component: ProductsComponent,
       },
     ],
   },
@@ -20,4 +25,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class UserRoutingModule { }
+export class UserRoutingModule {}

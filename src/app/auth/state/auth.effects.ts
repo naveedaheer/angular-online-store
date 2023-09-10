@@ -58,7 +58,7 @@ export class AuthEffects {
           this.store.dispatch(setErrorMessage({ message: '' }));
           if (action.redirect) {
             if (action?.user?.username.toLowerCase() === "user") {
-              this.router.navigate(['/']);
+              this.router.navigate(['/user/products']);
             }
             if (action?.user?.username.toLowerCase() === "admin") {
               this.router.navigate(['/admin/products']);
