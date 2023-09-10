@@ -75,7 +75,7 @@ export class AuthEffects {
       ofType(autoLogin),
       mergeMap((action) => {
         const user = this.authService.getUserFromLocalStorage();
-        return of(loginSuccess({ user, redirect: false }));
+        return of(loginSuccess({ user, redirect: true }));
       })
     );
   });
