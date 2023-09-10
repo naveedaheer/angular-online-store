@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <a routerLink="/" i18n="@@projectTitle">Angular Online Store</a>
-    
+    <a routerLink="/" i18n="@@projectTitle">Online Store</a>
+
     <div class="menu">
       <a *ngIf="!(loggedInUser | async)" routerLink="/auth/login" mat-button i18n="@@login">Login</a>
       <button mat-icon-button *ngIf="(loggedInUser | async)">
