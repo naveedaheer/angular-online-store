@@ -24,7 +24,6 @@ export class LoginComponent {
   ngOnInit(): void {}
   
   onLoginSubmit() {
-    console.log("this.loginForm.value", this.loginForm.value)
     const username = this.loginForm.value.username;
     const password = this.loginForm.value.password;
     this.store.dispatch(setLoadingSpinner({ status: true }));

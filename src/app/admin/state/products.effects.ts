@@ -17,7 +17,7 @@ export class ProductEffects {
       ofType(loadProducts),
       switchMap(() =>
         this.productService.getProducts().pipe(
-          map((products) => { console.log(products); return loadProductsSuccess({ products }) }),
+          map((products) => { return loadProductsSuccess({ products }) }),
           catchError((error) => of(loadProductsFailure({ error })))
         )
       )
@@ -29,7 +29,7 @@ export class ProductEffects {
       ofType(loadProductDetail),
       switchMap((action) =>
         this.productService.getProductDetail(action.productId).pipe(
-          map((product) => { console.log(product); return loadProductDetailSuccess({ product }) }),
+          map((product) => { return loadProductDetailSuccess({ product }) }),
           catchError((error) => of(loadProductDetailFailure({ error })))
         )
       )
