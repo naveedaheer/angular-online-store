@@ -1,1 +1,31 @@
-<p>products works!</p>
+<div class="container">
+    <div class="card-container">
+        <div>
+            <h1 i18n="@@products">Products</h1>
+        </div>
+        <div class="card">
+            <div *ngFor="let product of products$ | async">
+                <mat-card class="example-card" (click)="goToProductDetail(product.id)">
+                    <mat-card-header>
+                        <mat-card-title class="mat-card-title">{{product.title}}</mat-card-title>
+                    </mat-card-header>
+                    <div class="image-container">
+                        <img mat-card-image [src]="product.image" alt="Photo of a product" i18n-placeholder>
+                    </div>
+                    <mat-card-content>
+                        <p>{{product.description}}</p>
+
+                        <mat-chip>{{product.category}}</mat-chip>
+
+                        <div class="rating">
+                            <span><b i18n="@@rating">Rateing:</b> {{product.rating.rate}}</span>
+
+                            <span><b i18n="@@count">Count:</b> {{product.rating.count}}</span>
+                        </div>
+                    </mat-card-content>
+                   
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

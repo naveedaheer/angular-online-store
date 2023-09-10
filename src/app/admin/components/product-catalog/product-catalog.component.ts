@@ -44,13 +44,14 @@ export class ProductCatalogComponent {
         this.deleteProduct(id)
       } else {
         // User clicked 'Cancel' or closed the dialog
-        console.log('Canceled');
       }
     });
   }
+
   deleteProduct(productId: number) {
     this.store.dispatch(deleteProduct({ productId }));
   }
+
   openAddProductDialog() {
     const dialogRef = this.dialog.open(AddProductComponent, {
       width: '400px',
@@ -62,7 +63,6 @@ export class ProductCatalogComponent {
   }
 
   openEditProductDialog(product: any) {
-    console.log(product, 'product')
     // Open the Add Product dialog and provide productToEdit for editing
     const dialogRef = this.dialog.open(AddProductComponent, {
       width: '400px',
