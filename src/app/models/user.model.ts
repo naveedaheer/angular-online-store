@@ -12,4 +12,8 @@ export class User {
   getUserToken(): string {
     return this.token;
   }
+
+  getUserType(): string {
+    return this.username.toLowerCase();
+  }
 }

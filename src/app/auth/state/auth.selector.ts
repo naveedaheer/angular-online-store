@@ -11,3 +11,15 @@ export const isAuthenticated = createSelector(getAuthState, (state) => {
 export const getToken = createSelector(getAuthState, (state) => {
   return state.user ? state.user.getUserToken() : null;
 });
+
+export const isAdmin = createSelector(getAuthState, (state) => {
+  return state.user ? state.user.getUserType() === 'admin' : null;
+});
+
+export const isUser = createSelector(getAuthState, (state) => {
+  return state.user ? state.user.getUserType() === 'user' : null;
+});
+
+export const LoggedinUser = createSelector(getAuthState, (state) => {
+  return state.user ? `Naveed (${state.user.username})` : '';
+});

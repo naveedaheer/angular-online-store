@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { LocaleItem } from './models/shared.model';
+import { Store } from '@ngrx/store';
+import { AppState } from './store/app.state';
+import { autoLogin } from './auth/state/auth.actions';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +17,12 @@ export class AppComponent {
     { code: 'ar', label: 'عربي' }
   ];
 
-  constructor(private titleService: Title) {
+  constructor(private titleService: Title, private store: Store<AppState>) {
     this.titleService.setTitle($localize`${this.title}`);
   }
+  
+  ngOnInit() {
+    this.store.dispatch(autoLogin());
+  }
+
 }

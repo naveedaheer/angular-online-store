@@ -3,13 +3,11 @@
     <a routerLink="/" i18n="@@projectTitle">Angular Online Store</a>
     
     <div class="menu">
-      <a routerLink="/auth/login" mat-button i18n="@@login">Login</a>
-      <button mat-icon-button>
+      <a *ngIf="!(loggedInUser | async)" routerLink="/auth/login" mat-button i18n="@@login">Login</a>
+      <button mat-icon-button *ngIf="(loggedInUser | async)">
         <mat-icon>account_circle</mat-icon>
       </button>
-      <button mat-icon-button>
-        <mat-icon>shopping_cart</mat-icon>
-      </button>
+      <span *ngIf="(loggedInUser | async) as user">{{ user }}</span>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
