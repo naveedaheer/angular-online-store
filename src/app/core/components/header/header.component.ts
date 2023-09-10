@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { LoggedinUser } from 'src/app/auth/state/auth.selector';
 import { AppState } from 'src/app/store/app.state';
+import { autoLogout } from 'src/app/auth/state/auth.actions';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +17,11 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.loggedInUser = this.store.select(LoggedinUser);
+  }
+
+  onLogout(event: Event) {
+    event.preventDefault();
+    this.store.dispatch(autoLogout());
   }
   
 }
