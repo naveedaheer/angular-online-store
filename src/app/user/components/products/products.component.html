@@ -18,12 +18,12 @@
                         <mat-chip>{{product.category}}</mat-chip>
 
                         <div class="rating">
-                            <span><b i18n="@@rating">Rateing:</b> {{product.rating.rate}}</span>
-
-                            <span><b i18n="@@count">Count:</b> {{product.rating.count}}</span>
+                            <ngx-stars [readonly]="true" [maxStars]="5" [animation]="product.rating.rate ? false : true"
+                                [color]="'dodgerblue'" [size]="1" [customPadding]="'.3rem'"
+                                [initialStars]="product.rating.rate"></ngx-stars>
+                            <span>({{product.rating.count}})</span>
                         </div>
                     </mat-card-content>
-                   
                 </mat-card>
             </div>
         </div>
