@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { loadProductDetail } from 'src/app/admin/state/products.actions';
+import { selectProductDetail } from 'src/app/admin/state/products.selector';
 import { ProductResponseData } from 'src/app/models/product.model';
 import { AppState } from 'src/app/store/app.state';
-import { loadProductDetail } from '../../state/products.actions';
-import { selectProductDetail } from '../../state/products.selector';
 
 @Component({
   selector: 'app-product-detail',

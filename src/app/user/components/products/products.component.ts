@@ -26,6 +26,6 @@ export class ProductsComponent {
   }
 
   goToProductDetail(id: number) {
-    this.router.navigate([`/admin/product/${id}`]);
+    this.router.navigate([`/user/product/${id}`]);
   }
 }
