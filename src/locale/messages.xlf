@@ -56,29 +56,28 @@
         <source>Confirmation</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/admin/components/confirmation-dialog/confirmation-dialog.component.html</context>
-          <context context-type="linenumber">1</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="text_areYouSure" datatype="html">
-        <source> Are you sure you want to perform this action?
-</source>
+        <source> Are you sure you want to perform this action? </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/admin/components/confirmation-dialog/confirmation-dialog.component.html</context>
-          <context context-type="linenumber">2,4</context>
+          <context context-type="linenumber">3,5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cancel" datatype="html">
         <source>Cancel</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/admin/components/confirmation-dialog/confirmation-dialog.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="yes" datatype="html">
         <source>Yes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/admin/components/confirmation-dialog/confirmation-dialog.component.html</context>
-          <context context-type="linenumber">7</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="products" datatype="html">
@@ -125,6 +124,10 @@
       </trans-unit>
       <trans-unit id="description" datatype="html">
         <source>description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/product-catalog/product-catalog.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/admin/components/product-catalog/product-catalog.component.html</context>
           <context context-type="linenumber">71</context>

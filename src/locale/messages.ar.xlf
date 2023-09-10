@@ -1,20 +1,243 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-US" datatype="plaintext" original="ng2.template" target-language="ar">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="6516989012970314880" datatype="html">
+        <source>Product Title</source>
+        <target>عنوان المنتج</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/add-product/add-product.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8965461446409355462" datatype="html">
+        <source>Product Description</source>
+        <target>وصف المنتج</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/add-product/add-product.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3228987374257447860" datatype="html">
+        <source>Product Price</source>
+        <target>سعر المنتج</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/add-product/add-product.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="category" datatype="html">
+        <source>Category</source>
+        <target>فئة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/add-product/add-product.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/product-catalog/product-catalog.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/product-detail/product-detail.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addProduct" datatype="html">
+        <source>Add Product</source>
+        <target>أضف منتج</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/add-product/add-product.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="editProduct" datatype="html">
+        <source>Edit Product</source>
+        <target>تحرير المنتج</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/add-product/add-product.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="confirmation" datatype="html">
+        <source>Confirmation</source>
+        <target>تأكيد</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/confirmation-dialog/confirmation-dialog.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="text_areYouSure" datatype="html">
+        <source> Are you sure you want to perform this action? </source>
+        <target>هل أنت متأكد أنك تريد تنفيذ هذا الإجراء؟</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/confirmation-dialog/confirmation-dialog.component.html</context>
+          <context context-type="linenumber">3,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cancel" datatype="html">
+        <source>Cancel</source>
+        <target>يلغي</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/confirmation-dialog/confirmation-dialog.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="yes" datatype="html">
+        <source>Yes</source>
+        <target>نعم</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/confirmation-dialog/confirmation-dialog.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="products" datatype="html">
+        <source>Products</source>
+        <target>منتجات</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/product-catalog/product-catalog.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addProducts" datatype="html">
+        <source> Add Products </source>
+        <target>أضف المنتجات</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/product-catalog/product-catalog.component.html</context>
+          <context context-type="linenumber">32,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="id" datatype="html">
+        <source>ID.</source>
+        <target>بطاقة تعريف.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/product-catalog/product-catalog.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="image" datatype="html">
+        <source> Image </source>
+        <target>صورة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/product-catalog/product-catalog.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="title" datatype="html">
+        <source>title</source>
+        <target>عنوان</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/product-catalog/product-catalog.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="price" datatype="html">
+        <source>price</source>
+        <target>سعر</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/product-catalog/product-catalog.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="description" datatype="html">
+        <source>description</source>
+        <target>وصف</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/product-catalog/product-catalog.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/product-catalog/product-catalog.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/product-detail/product-detail.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="detailView" datatype="html">
+        <source>Detail View</source>
+        <target>عرض التفاصيل</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/product-detail/product-detail.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7813124157347523871" datatype="html">
+        <source>Photo of a product</source>
+        <target>صورة للمنتج</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/components/product-detail/product-detail.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="3752267119951385539" datatype="html">
         <source>Hello and welcome!</source>
         <target>أهلا ومرحبا!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">2</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1737753151350322492" datatype="html">
         <source><x id="PH" equiv-text="this.title"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.ts</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9216296136044355574" datatype="html">
+        <source>Login Form</source>
+        <target>نموذج تسجيل الدخول</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/components/login/login.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">loginForm</note>
+      </trans-unit>
+      <trans-unit id="enterUsername" datatype="html">
+        <source>Enter your username</source>
+        <target>أدخل اسم المستخدم الخاص بك</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/components/login/login.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2005878310636944938" datatype="html">
+        <source>Enter user name</source>
+        <target>ادخل اسم المستخدم</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/components/login/login.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">enterUsername</note>
+      </trans-unit>
+      <trans-unit id="2772023564304193657" datatype="html">
+        <source>Enter your password</source>
+        <target>ادخل رقمك السري</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/components/login/login.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">enterPassword</note>
+      </trans-unit>
+      <trans-unit id="login" datatype="html">
+        <source>Login</source>
+        <target>تسجيل الدخول</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/auth/components/login/login.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projectTitle" datatype="html">
+        <source>Angular Online Store</source>
+        <target>متجر الزاوي على الانترنت</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.html</context>
+          <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
     </body>
